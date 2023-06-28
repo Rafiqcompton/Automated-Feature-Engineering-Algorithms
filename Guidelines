@@ -1,0 +1,3 @@
+When using automated feature engineering, it's important to still understand your data and the features being generated. 
+While the process is automated, you should still check the generated features for relevance and potential bias. 
+Also, be aware that automated feature engineering can sometimes lead to overfitting if not properly managed.
