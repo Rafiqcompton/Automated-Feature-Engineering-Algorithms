@@ -1,0 +1,15 @@
+Here's a simple example of using Featuretools to automatically generate features for a dataset:
+
+
+   import featuretools as ft
+
+   # Assume we have a dataset 'data' with a target column 'target'
+   es = ft.EntitySet(id = 'data')
+   es = es.entity_from_dataframe(entity_id = 'data', dataframe = data, 
+                                 make_index = True, index = 'index')
+
+   # Run deep feature synthesis with transformation primitives
+   feature_matrix, feature_defs = ft.dfs(entityset = es, target_entity = 'data',
+                                         trans_primitives = ['add_numeric', 'multiply_numeric'])
+
+   # feature_matrix now contains the original data plus new features
